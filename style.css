@@ -1,0 +1,100 @@
+:root {
+    --whatsapp-green: #075e54;
+    --whatsapp-light-green: #128c7e;
+    --whatsapp-teal-green: #009688;
+    --whatsapp-bg-gray: #ece5dd;
+    --whatsapp-chat-bg: #e0ddd7;
+    --whatsapp-message-bubble-green: #dcf8c6;
+    --whatsapp-message-bubble-white: #ffffff;
+    --whatsapp-dark-gray: #333333;
+    --whatsapp-medium-gray: #666666;
+    --whatsapp-light-gray: #f0f2f5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--whatsapp-bg-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#app {
+    display: flex;
+    width: 95%;
+    height: 95vh;
+    background-color: var(--whatsapp-light-gray);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+    width: 35%;
+    border-right: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-area {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar header,
+.chat-area header {
+    height: 59px;
+    background-color: var(--whatsapp-light-gray);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.sidebar .avatar {
+    width: 40px;
+    height: 40px;
+    background-color: var(--whatsapp-dark-gray);
+    border-radius: 50%;
+}
+
+.sidebar .icons {
+    margin-left: auto;
+}
+
+.sidebar .search {
+    height: 49px;
+    background-color: var(--whatsapp-light-gray);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.sidebar .chats {
+    flex-grow: 1;
+    overflow-y: auto;
+    background-color: #fff;
+}
+
+.chat-area .messages {
+    flex-grow: 1;
+    background-color: var(--whatsapp-chat-bg);
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.chat-area .message-input {
+    height: 62px;
+    background-color: var(--whatsapp-light-gray);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
